@@ -1,0 +1,105 @@
+name: Redeploy Choreo
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */3 * * *'
+
+jobs:
+  Redeploy:
+    name: Redeploy Choreo
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4.0.0
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.REPO_ACCESS_TOKEN }} # 使用自定义 PAT 来检出代码
+
+      - name: Renew README.md
+        run: |
+            DATE=$(date "+%Y/%m/%d %H:%M:%S")
+            echo "${DATE}" > README.md
+            git config --global user.email "name: Redeploy Choreo
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */3 * * *'
+
+jobs:
+  Redeploy:
+    name: Redeploy Choreo
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4.0.0
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.REPO_ACCESS_TOKEN }} # 使用自定义 PAT 来检出代码
+
+      - name: Renew README.md
+        run: |
+            DATE=$(date "+%Y/%m/%d %H:%M:%S")
+            echo "${DATE}" > README.md
+            git config --global user.email "name: Redeploy Choreo
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 */3 * * *'
+
+jobs:
+  Redeploy:
+    name: Redeploy Choreo
+
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4.0.0
+        with:
+          fetch-depth: 1
+          token: ${{ secrets.REPO_ACCESS_TOKEN }} # 使用自定义 PAT 来检出代码
+
+      - name: Renew README.md
+        run: |
+            DATE=$(date "+%Y/%m/%d %H:%M:%S")
+            echo "${DATE}" > README.md
+            git config --global user.email "ardjsrset@users.noreply.github.com"
+            git config --global user.name "ardjsrset"
+            git add README.md
+            git commit -m "Auto deploy by Github Actions, ${DATE}"
+            git push --force
+
+      - name: Delete old workflow runs
+        uses: MajorScruffy/delete-old-workflow-runs@v0.3.0
+        with:
+          github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          repository: ${{ github.repository }}
+          older-than-seconds: 3600
+@users.noreply.github.com"
+            git config --global user.name "ardjsrset"
+            git add README.md
+            git commit -m "Auto deploy by Github Actions, ${DATE}"
+            git push --force
+
+      - name: Delete old workflow runs
+        uses: MajorScruffy/delete-old-workflow-runs@v0.3.0
+        with:
+          github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          repository: ${{ github.repository }}
+          older-than-seconds: 3600
+@users.noreply.github.com"
+            git config --global user.name "ardjsrset"
+            git add README.md
+            git commit -m "Auto deploy by Github Actions, ${DATE}"
+            git push --force
+
+      - name: Delete old workflow runs
+        uses: MajorScruffy/delete-old-workflow-runs@v0.3.0
+        with:
+          github_token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          repository: ${{ github.repository }}
+          older-than-seconds: 3600
